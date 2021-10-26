@@ -1,0 +1,42 @@
+﻿{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHATBOT PWSZ ELBLAG</title>
+
+    <link rel="stylesheet" href="{% static 'chat/css/style.css' %}" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="chat-box">
+            <div class="client">
+                <img src="{% static 'chat/img/Jack.png' %}" alt="logo" />
+                <div class="client-info">
+                    <h2>Jack Fingerszak</h2>
+                    <p>online</p>
+                </div>
+            </div>
+            <div class="chats">
+
+            </div>
+            </div>
+                {% csrf_token %}
+                <div class="chat-input">
+                    <input id="msg-input" type="text" placeholder="Enter Message"/>
+                    <button class="send-btn" id="send-btn">
+                        <img src="{% static 'chat/img/send.png' %}" alt="send-btn">
+                    </button>
+                </div>
+
+
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="{% static 'chat/js/chat.js' %}" ></script>
+</body>
+</html>
